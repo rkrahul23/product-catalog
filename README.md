@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+___________E-COMMERCE-PRODUCT-CATALOG______________
 
-## Getting Started
+This is a Next.js-based Product Catalog App where users can browse products, view details, and add items to their shopping cart. The app is built with Material UI, React Query, and Jotai for state management.
 
-First, run the development server:
+________FEATURES___________
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+✔️ View Product Listings – Display products with images, prices, and ratings.
+✔️ Filter by Category – Browse items by categories like electronics, clothing, etc.
+✔️ Sort by Price/Rating – Easily sort products by price or customer ratings.
+✔️ Product Details Page – See detailed product descriptions and reviews.
+✔️ Shopping Cart – Add, remove, and adjust quantities of products in the cart.
+✔️ Dark Mode Support – Switch between light and dark themes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+_______API-INTEGRATION____________
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project fetches product data from the Fake Store API:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📌 Base URL: https://fakestoreapi.com
 
-## Learn More
+GET /products → Fetch all products
+GET /products/{id} → Fetch product details
+GET /products/category/{category} → Fetch products by category
 
-To learn more about Next.js, take a look at the following resources:
+________TECH STACK___________
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Next.js (App Router) – For server-side rendering & routing
+Material UI – Beautiful UI components
+React Query – Efficient API data fetching & caching
+Jotai – Lightweight global state management
+TypeScript – Strongly typed JavaScript
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+_______HOW THE SHOPPING CART WORKS_______
 
-## Deploy on Vercel
+Products are stored in Jotai state.
+Changes (add/remove/update) reflect instantly using React state.
+The cart data persists in localStorage, so it remains even after refresh.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
